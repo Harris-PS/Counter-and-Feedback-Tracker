@@ -1,11 +1,13 @@
-import { useState } from "react"
-
-const [text, setText] = useState("");
 function Feedback(){
   return(
-    <form action="text"></form>
-    
-  )
+    <div>
+      <form>
+        <label>Feedback Form</label>
+        <input type="text" />
+        <button onClick={}>Submit</button>
+      </form>
+    </div>
+  );
 
 }
 
