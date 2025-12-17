@@ -19,7 +19,7 @@ function Feedback({feedback,setFeedback}){
         <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
         <button className="btn-2">Submit</button>
       </form>
-      <ul>
+      <ul className="feedback-list">
         {feedback.map((item) => (
           <li>{item}</li>
         ))}
