@@ -1,17 +1,29 @@
+import { useState } from "react";
+
 function Feedback({feedback,setFeedback}){
 
-  const newFeedback = () =>{
-    setFeedback(feedback)
-  }
+  const [input, setInput] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (input.trim() !== "") {
+      setFeedback([...feedback, input]); 
+      setInput(""); 
+    }
+  };
 
   return(
     <div className="feedback-container">
-      <form className="feedback-form">
-        <lable className="feedback-lable">Enter Feedback: </lable>
-        <input type="text"></input>
-        <button className="btn-2" onClick={newFeedback}>Submit</button>
+      <form className="feedback-form" onSubmit={handleSubmit}>
+        <label className="feedback-lable">Enter Feedback: </label>
+        <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
+        <button className="btn-2">Submit</button>
       </form>
-      <p>{feedback}</p>
+      <ul>
+        {feedback.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </div>
   )
 
