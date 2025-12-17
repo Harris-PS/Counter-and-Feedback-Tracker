@@ -1,13 +1,14 @@
-function Feedback(){
+function Feedback({feedback, setFeedback}){
+
   return(
-    <div>
-      <form>
-        <label>Feedback Form</label>
-        <input type="text" />
-        <button onClick={}>Submit</button>
+    <div className="feedback-container">
+      <form className="feedback-form">
+        <lable className="feedback-lable">Enter Feedback: </lable>
+        <input type="text"value={setFeedback}></input>
+        <button className="btn-2">Submit</button>
       </form>
     </div>
-  );
+  )
 
 }
 

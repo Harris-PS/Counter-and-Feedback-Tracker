@@ -22,3 +22,25 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.feedback-container{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.feedback-form{
+  margin: 50px;
+}
+
+.btn-2{
+  width: 100px;
+  height: 24px;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0px 5px;
+  background-color: rgb(63, 172, 227);
+  border: none;
+  color: whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+}
