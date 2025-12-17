@@ -21,7 +21,7 @@ function Feedback({feedback,setFeedback}){
       </form>
       <ul className="feedback-list">
         {feedback.map((item) => (
-          <li>{item}</li>
+          <li key = {item}>{item}</li>
         ))}
       </ul>
     </div>
